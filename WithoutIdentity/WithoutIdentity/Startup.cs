@@ -48,9 +48,9 @@ namespace WithoutIdentity
             {
                 options.CookieHttpOnly = true;
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
-                options.LoginPath = "Account/Login";
-                options.LogoutPath = "Account/Logout";
-                options.AccessDeniedPath = "Account/AccessDenied";
+                options.LoginPath = "/Account/Login";
+                options.LogoutPath = "/Account/Logout";
+                options.AccessDeniedPath = "/Account/AccessDenied";
                 options.SlidingExpiration = true; //renova tempo de expiração
             });
 
