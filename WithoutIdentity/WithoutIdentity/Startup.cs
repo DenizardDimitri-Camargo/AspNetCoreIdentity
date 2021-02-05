@@ -34,6 +34,26 @@ namespace WithoutIdentity
                 .AddEntityFrameworkStores<ApplicationDataContext>() //EF responsável por armazenar dados do Identity
                 .AddDefaultTokenProviders();
 
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8; //default = 6
+                options.Password.RequiredUniqueChars = 6; //default = 1
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+            });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.CookieHttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                options.LoginPath = "Account/Login";
+                options.LogoutPath = "Account/Logout";
+                options.AccessDeniedPath = "Account/AccessDenied";
+                options.SlidingExpiration = true; //renova tempo de expiração
+            });
+
             services.AddMvc();
         }
 
