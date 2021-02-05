@@ -29,7 +29,11 @@ namespace Id.Overview.Mvc
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => { //extension method que adiciona o identity 
+                options.Lockout.AllowedForNewUsers = true; //determina se novo user pode ser bloqueado
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5); //quant. de tempo que o user ficará bloqueado ao acontecer um lockout
+                options.Lockout.MaxFailedAccessAttempts = 5; //n° de tentativas antes do lockout(caso lockout = true)
+                }) 
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
