@@ -61,7 +61,7 @@ namespace Id.Overview.Mvc.Controllers
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false); //lockout: travar o login caso falhe
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
@@ -220,19 +220,19 @@ namespace Id.Overview.Mvc.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await _userManager.CreateAsync(user, model.Password);
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email }; // cria um identityUser
+                var result = await _userManager.CreateAsync(user, model.Password); //userManager, cria este user por favor 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
-                    await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
+                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user); // userManager gera token de confirmação de email
+                    var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme); //gera url que o user clica dentro do email
+                    await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl); //de fato aqui envia o email creo...
 
-                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    await _signInManager.SignInAsync(user, isPersistent: false); //faz login, basicamente "remember me" do form de login
                     _logger.LogInformation("User created a new account with password.");
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToLocal(returnUrl); //retorna para a url... caso for nula, redireciona para index
                 }
                 AddErrors(result);
             }

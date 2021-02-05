@@ -55,7 +55,7 @@ namespace Id.Overview.Mvc
 
             app.UseStaticFiles();
 
-            app.UseAuthentication();
+            app.UseAuthentication(); //add o identity ao pipeline da aplicação
 
             app.UseMvc(routes =>
             {

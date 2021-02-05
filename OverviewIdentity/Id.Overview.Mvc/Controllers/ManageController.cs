@@ -18,7 +18,7 @@ namespace Id.Overview.Mvc.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]
-    public class ManageController : Controller
+    public class ManageController : Controller //métodos de gerenciamento dos dados do user quando já existe(confirmar email, mudar senha, logins externos, two factor)
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;

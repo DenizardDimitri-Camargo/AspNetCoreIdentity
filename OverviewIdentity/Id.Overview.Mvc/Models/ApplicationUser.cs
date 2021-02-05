@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 namespace Id.Overview.Mvc.Models
 {
     // Add profile data for application users by adding properties to the ApplicationUser class
-    public class ApplicationUser : IdentityUser
+    public class ApplicationUser : IdentityUser //representa o user do identity na aplicação
     {
     }
 }
