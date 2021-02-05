@@ -54,6 +54,10 @@ namespace Id.Overview.Mvc
                 //options.Tokens.ChangePhoneNumberTokenProvider
                 //options.Tokens.EmailConfirmationTokenProvider
                 //options.Tokens.PasswordResetTokenProvider
+
+                //USER: criaçõa de users com Identity
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+"; //define os chars para o nome do user
+                options.User.RequireUniqueEmail = false;
             }) 
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
