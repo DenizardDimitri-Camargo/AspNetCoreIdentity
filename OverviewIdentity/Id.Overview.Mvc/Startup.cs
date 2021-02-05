@@ -47,6 +47,13 @@ namespace Id.Overview.Mvc
                 //SIGNIN
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
+
+                //TOKENS
+                //options.Tokens.AuthenticatorTokenProvider 
+                //options.Tokens.ChangeEmailTokenProvider
+                //options.Tokens.ChangePhoneNumberTokenProvider
+                //options.Tokens.EmailConfirmationTokenProvider
+                //options.Tokens.PasswordResetTokenProvider
             }) 
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
