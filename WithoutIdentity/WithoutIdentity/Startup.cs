@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WithoutIdentity.Data;
+using WithoutIdentity.Models;
 
 namespace WithoutIdentity
 {
@@ -28,6 +30,10 @@ namespace WithoutIdentity
                 options.UseSqlServer(connection)
             );
 
+            services.AddIdentity<ApplicationUser, IdentityRole<Guid>>() //por padrão é string, portanto a PK no BD seria string, foi setado para Guid
+                .AddEntityFrameworkStores<ApplicationDataContext>() //EF responsável por armazenar dados do Identity
+                .AddDefaultTokenProviders();
+
             services.AddMvc();
         }
 
@@ -43,6 +49,8 @@ namespace WithoutIdentity
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseAuthentication(); //identity é adicionado ao pipeline da aplicação
 
             app.UseStaticFiles();
 

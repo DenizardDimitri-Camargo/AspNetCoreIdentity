@@ -13,3 +13,4 @@ C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\
 C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\WithoutIdentity\WithoutIdentity\obj\Debug\netcoreapp2.0\WithoutIdentity.dll
 C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\WithoutIdentity\WithoutIdentity\obj\Debug\netcoreapp2.0\WithoutIdentity.pdb
 C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\WithoutIdentity\WithoutIdentity\obj\Debug\netcoreapp2.0\WithoutIdentity.genruntimeconfig.cache
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\WithoutIdentity\WithoutIdentity\obj\Debug\netcoreapp2.0\WithoutIdentity.csproj.CoreCompileInputs.cache
