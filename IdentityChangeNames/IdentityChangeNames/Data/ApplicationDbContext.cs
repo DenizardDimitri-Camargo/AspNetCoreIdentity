@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using IdentityChangeNames.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace IdentityChangeNames.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -18,9 +19,26 @@ namespace IdentityChangeNames.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
+
+            builder.Entity<ApplicationUser>().ToTable("User"); //renomeia tabela no BD
+            
+            builder.Entity<ApplicationRole>().ToTable("Role");
+            
+            builder.Entity<IdentityUserClaim<Guid>>().ToTable("UserClaim"); //passa o tipo de PK do user (Guid = uniqueIdentifir)
+
+            builder.Entity<IdentityUserRole<Guid>>().ToTable("UserRole");
+            
+            builder.Entity<IdentityUserLogin<Guid>>().ToTable("UserLogin");
+            
+            builder.Entity<IdentityRoleClaim<Guid>>().ToTable("RoleClaim");
+            
+            builder.Entity<IdentityUserToken<Guid>>().ToTable("UserToken");
+
+            builder.Entity<ApplicationUser>(b => //renomeia coluna no BD
+            {
+                b.Property(au => au.Email)
+                .HasColumnName("EmailAddress");
+            });
         }
     }
 }
