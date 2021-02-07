@@ -1,0 +1,14 @@
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\appsettings.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\Properties\serviceDependencies.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\Properties\serviceDependencies.local.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\IdentityWithDapper.deps.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\IdentityWithDapper.runtimeconfig.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\IdentityWithDapper.runtimeconfig.dev.json
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\bin\Debug\netcoreapp2.0\IdentityWithDapper.dll
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.csprojAssemblyReference.cache
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.AssemblyInfoInputs.cache
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.AssemblyInfo.cs
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.genruntimeconfig.cache
