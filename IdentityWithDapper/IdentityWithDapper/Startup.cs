@@ -26,11 +26,14 @@ namespace IdentityWithDapper
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<ApplicationDbContext>(options => //não será usado o EF
+            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddTransient<IUserStore<ApplicationUser>, UserStore>(); //quando for exigido um IUserStore<ApplicationUser>, será retornado um UserStore
+            services.AddTransient<IRoleStore<ApplicationRole>, RoleStore>(); 
+
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
+                //.AddEntityFrameworkStores<ApplicationDbContext>() //não será usado o EF
                 .AddDefaultTokenProviders();
 
             // Add application services.
