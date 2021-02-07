@@ -43,8 +43,16 @@ namespace ExternalProviders
                 facebookOptions.Scope.Add("user_birthday");
 
                 facebookOptions.ClaimActions.MapJsonKey(ClaimTypes.Locality, "locale");
-                
+
                 facebookOptions.SaveTokens = true;
+            })
+            .AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+
+                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+                
+                googleOptions.SaveTokens = true;
             });
 
             // Add application services.
