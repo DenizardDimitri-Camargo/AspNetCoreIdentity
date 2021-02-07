@@ -309,7 +309,7 @@ namespace ExternalProviders.Controllers
 
         [HttpGet]
         public async Task<IActionResult> TwoFactorAuthentication()
-        {
+        {//2FA
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -365,7 +365,7 @@ namespace ExternalProviders.Controllers
 
         [HttpGet]
         public async Task<IActionResult> EnableAuthenticator()
-        {
+        {//2FA
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -381,7 +381,7 @@ namespace ExternalProviders.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EnableAuthenticator(EnableAuthenticatorViewModel model)
-        {
+        {//2FA
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -417,7 +417,7 @@ namespace ExternalProviders.Controllers
 
         [HttpGet]
         public IActionResult ShowRecoveryCodes()
-        {
+        {//2FA
             var recoveryCodes = (string[])TempData[RecoveryCodesKey];
             if (recoveryCodes == null)
             {
@@ -502,7 +502,7 @@ namespace ExternalProviders.Controllers
         }
 
         private string FormatKey(string unformattedKey)
-        {
+        { //2FA
             var result = new StringBuilder();
             int currentPosition = 0;
             while (currentPosition + 4 < unformattedKey.Length)
@@ -519,16 +519,16 @@ namespace ExternalProviders.Controllers
         }
 
         private string GenerateQrCodeUri(string email, string unformattedKey)
-        {
+        { //2FA: gera url que é enviada ao aplicativo autenticador
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("ExternalProviders"),
+                _urlEncoder.Encode("2FA Test"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }
 
         private async Task LoadSharedKeyAndQrCodeUriAsync(ApplicationUser user, EnableAuthenticatorViewModel model)
-        {
+        { //2FA: tenta obter um authentication key para o user, se ele não tiver ele reseta e obtem outra key
             var unformattedKey = await _userManager.GetAuthenticatorKeyAsync(user);
             if (string.IsNullOrEmpty(unformattedKey))
             {
