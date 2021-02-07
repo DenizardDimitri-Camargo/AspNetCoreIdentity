@@ -1,4 +1,5 @@
-﻿using IdentityWithDapper.Models;
+﻿using Dapper;
+using IdentityWithDapper.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using System;

@@ -12,3 +12,5 @@ C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\
 C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.AssemblyInfoInputs.cache
 C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.AssemblyInfo.cs
 C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.genruntimeconfig.cache
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\IdentityWithDapper.csproj.CoreCompileInputs.cache
+C:\TCC\ESTUDO\Balta io\Introdução ao ASP.NET Core Identity\AspNetCoreIdentity\IdentityWithDapper\IdentityWithDapper\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
